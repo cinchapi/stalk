@@ -1,12 +1,19 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
+apply plugin: 'jarsh'
 
 buildscript {
     repositories {
         mavenCentral()
     }
+    dependencies {
+        classpath "org.cinchapi:jarsh:0.1"
+    }
 }
+
+ext.mainClass = 'org.cinchapi.stalk.Stalk'
+
 
 repositories {
    mavenCentral()
